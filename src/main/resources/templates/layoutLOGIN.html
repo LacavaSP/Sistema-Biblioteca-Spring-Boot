@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	 
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+	<meta charset = "ISO-8859-1">
+<title> Site da Biblioteca Cervantes </title>
+<!-- Bootstrap -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <!--  JQuery -->
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+ <style>
+   input.field-error, textarea.field-error { border: 1px solid #B94A48; }
+ </style>
+</head>
+<body>
+
+<div class = "container " >
+	 <div>
+		<nav class="navbar navbar-expand-sm  bg-dark  navbar-dark">
+			<ul class = "navbar-nav">
+			 <a class="navbar-brand" href="#" th:href="@{/}">
+			  <img src="https://drive.google.com/u/3/uc?id=1Q-ClkwJOIfLDftUmc27dIHT5UPuS952B&export=download" width="35" height="35" class="d-inline-block align-top" alt="">		
+					 		Home |
+			 </a>
+				<li class="nav-item">
+					<a class = "nav-link" href = "#" th:href="@{/locatarios/view}">Locatários</a>
+				</li>
+				<li class="nav-item">
+					<a class = "nav-link" href = "#" th:href="@{/livros/view}">Livros</a>
+				</li>
+					<li class="nav-item">
+					<a class = "nav-link" href = "#" th:href="@{/emprestimos/view}">Empréstimos</a>
+				</li>
+				</li>
+					<li class="nav-item">
+					<a class = "nav-link" href = "#" th:href="@{/estantes/view}">Estantes</a>
+				</li>
+				
+            </ul>
+		</nav>
+		 <h1 layout:fragment="header">cabeçalho falso</h1>
+ <div layout:fragment="content">content falso</div>
+<nav class="navbar navbar-expand-sm bg-dark fixed-bottom navbar-dark"  width="55" height="55">
+<ul class = "navbar-nav">
+<a class="navbar-brand" href="#">
+			  <img src="https://cdn-icons-png.flaticon.com/512/2649/2649707.png" width="35" height="35" class="d-inline-block align-top" alt="">		
+			 		Contato |
+			 </a>
+
+<a class="navbar-brand" href="https://www.facebook.com/eduardo.lacava/">
+			  <img src="https://www.facebook.com/images/fb_icon_325x325.png" width="35" height="35" class="d-inline-block align-top" alt="">		
+			 		Facebook
+			 </a>
+			 
+			 <a class="navbar-brand" href="https://www.instagram.com/dudulacava/">
+			  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1025px-Instagram-Icon.png" width="35" height="35" class="d-inline-block align-top" alt="">		
+			 		Instagram
+			 </a>
+
+ 		<a class="navbar-brand" href="https://api.whatsapp.com/send?phone=5511966053742&text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20uma%20d%C3%BAvida">
+			  <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1.png" width="35" height="35" class="d-inline-block align-top" alt="">		
+			 		Whatsapp
+			 </a>
+
+</ul>
+</nav>
+ 
+
+
+</div>
+
+
+	 </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	
+	
+	
+	
+	<h1 layout:fragment="header">
+<a>	<img src="
+https://lh3.googleusercontent.com/Pr1G7LcaiRhTpb4yU49TIUBPgWjo9GaoXFt3irVRJwl56Dxzyt1Y5zGJed6G_I3hSObEnAurT6yvnEG01AEhYppmzrQdIBrOJ4s=s400" width="220" height="400" class="d-inline-block align-top" alt="">		
+</a>
+	Biblioteca Cervantes </h1>
+	
+	<div layout:fragment="content" class="container">
+	 <div class="jumbotron">
+	 <h4> Painel de Controle </h4>
+	 </br>
+		<a th:href="@{/livros/form}" class="btn btn-lg btn-info">Registrar um livro</a>
+	    <a th:href="@{/estantes/form}" class="btn btn-lg btn-info">Registrar uma estante</a>
+	    <a th:href="@{/locatarios/form}" class="btn btn-lg btn-info">Registrar um locatário</a>
+	   	<a th:href="@{/emprestimos/form}" class="btn btn-lg btn-info">Registrar um empréstimo</a>
+	   	<a th:href="@{/h2-console}" class="btn btn-lg btn-info">Banco de dados</a>
+	 </div>
+	</div>
+	
+	
+</body>
+</html>

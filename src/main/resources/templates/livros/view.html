@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Lista de Locatários</title>
+</head>
+<body>
+	
+	<h1 layout:fragment="header">
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	
+	<img src = "https://drive.google.com/u/3/uc?id=1WrlRnPhpPXteIsSQhNz5-R69ACT_fU6_&export=download" width="150" height="150" class="d-inline-block align-top" alt="">	
+	
+
+
+	<br>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="75" height="100" class="d-inline-block align-top" alt=""> </a>
+	
+	Lista de Livros
+
+	</br>
+	
+	</h1>
+	
+	<div layout:fragment="content">
+	<div class="well bg-secondary">
+	
+	<table class="table table-striped" th:each = "m : ${livros}">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nome</th>
+					<th>Gênero</th>
+					<th>Número de Páginas</th>
+					<th>Autor</th>
+					<th>Edição</th>
+					<th>Disponibilidade</th>
+					<th>Remover</th>
+					<th>Modificar</th>
+				</tr>
+			</thead>
+			<tbody>
+			 
+				<tr> 
+					<td id="id" th:text="${m.ID}"></td>
+					<td id="nome" th:text="${m.nome}"></td>
+					<td id="genero" th:text="${m.genero}"></td>
+					<td id="numeroDePaginas" th:text="${m.numeroDePaginas}"></td>
+					<td id="nomeDoAutor" th:text="${m.autor}"></td>
+					<td id="edicao" th:text="${m.edicao}"></td>
+					<td id="disponibilidade" th:text="${m.disponibilidade}"></td>
+					<td>
+					<a th:href="@{'/livros/remove/' + ${m.ID}}" class="btn btn-lg btn-info btn-danger"> 
+					<img src = "https://drive.google.com/u/3/uc?id=1H8sGAkX-gLFEetOEAIZtUjNYMaXyI-rc&export=download" 
+					width="25" height="25" class="d-inline-block align-top" alt="">	</a>
+					</td>
+					<td>
+						 <a th:href="@{'/livros/alter/' + ${m.ID}}" class="btn btn-lg btn-info btn-warning"> 
+					<img src = "https://drive.google.com/u/3/uc?id=1G5x9FeoPMrashv1o7KhsRqN9-n2ip8bK&export=download" 
+					width="25" height="25" class="d-inline-block align-top" alt="">	</a>
+					</td>
+				</tr>
+				
+				
+			 
+			</tbody>
+		 
+		</table>
+	 
+	</div>
+	
+		
+	<a  th:href="@{/}" class="btn btn-lg btn-info"> Voltar </a>
+ 
+	</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Lista de Empréstimos do Locatário</title>
+</head>
+<body>
+	
+	<h1 layout:fragment="header">
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	
+	<img src = "https://lh3.googleusercontent.com/MMXeKsFRjdwDGP8RV6StPuzZGeBBpieltYIFq7sl95SyfZqEtenRoXMUS7l1eURloGzpXoCkUfZWBkbqAw-AWjtGynGoNNFqkw=s400" width="150" height="150" class="d-inline-block align-top" alt="">	
+	
+
+
+	<br>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="75" height="100" class="d-inline-block align-top" alt=""> </a>
+	
+Lista de Empréstimos do Locatário <a>
+
+	</br>
+	
+	</h1>
+	
+	<div layout:fragment="content">
+	<div class="well bg-secondary">
+	
+  <table class="table table-striped" th:each = "m : ${emprestimos}">
+	<thead>
+				<tr>
+					<th>ID</th>
+					<th>Data do Empréstimo</th>
+					<th>Data de Devolução</th>
+					<th>CPF do Locatário</th>
+					<th>Remover</th>
+					<th>Modificar</th>
+				</tr>
+			</thead>
+      
+     
+	<tbody>
+			 
+				<tr> 
+					<td id="id" th:text="${m.ID}">123</td>
+					<td id="data" th:text="${m.data}">123</td>
+					<td id="datalimite" th:text="${m.datalimite}">Nome...</td>
+					<td id="cpflc" th:text="${m.cpf}">Nome...</td>
+					<td>
+					<a th:href="@{'/emprestimos/remove/' + ${m.ID}}" class="btn btn-lg btn-info btn-danger"> 
+					<img src = "https://drive.google.com/u/3/uc?id=1H8sGAkX-gLFEetOEAIZtUjNYMaXyI-rc&export=download" 
+					width="25" height="25" class="d-inline-block align-top" alt="">	</a>
+					</td>
+						<td>
+				<a th:href="@{'/emprestimos/alter/' + ${m.ID}}" class="btn btn-lg btn-info btn-warning"> 
+					<img src = "https://drive.google.com/u/3/uc?id=1G5x9FeoPMrashv1o7KhsRqN9-n2ip8bK&export=download" 
+					width="25" height="25" class="d-inline-block align-top" alt="">	</a>
+					</td>
+				</tr>
+		
+			</tbody>
+
+</table>
+	</div>
+ <a  th:href="@{/locatarios/view}" class="btn btn-lg btn-info"> Voltar </a>
+	</div>
+</body>
+</html>

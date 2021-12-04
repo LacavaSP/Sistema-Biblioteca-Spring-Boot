@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Registro de Empréstimo</title>
+
+  <script>
+  $( function() {
+    $( "#data" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: 'dd-mm-yy' 
+    });
+  } );
+   $( function() {
+    $( "#datalimite" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: 'dd-mm-yy' 
+    });
+  } );
+  </script>
+  
+</head>
+<body>
+	
+	<h1 layout:fragment="header">
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<img src = "https://drive.google.com/u/3/uc?id=1havyH9rYD-m1L7V-mHWcMhQxR9TTRYN2&export=download" width="100" height="100" class="d-inline-block align-top" alt="">	
+	
+
+ 
+
+	<br>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="75" height="100" class="d-inline-block align-top" alt=""> </a>
+	Registro de Empréstimo
+	</br>
+	
+	</h1>
+	
+	<div layout:fragment="content">
+	<div class="well bg-secondary">
+	
+	<h1>Formulário</h1>
+    <form action="#" th:action="@{/emprestimos/form}" th:object="${emprestimos}" method="post">
+    
+    <br/>
+	
+		<div th:each = "m : ${msg}" class = "well"> 
+		<span th:text = "${m}"> </span>
+		</div>
+	
+	<br/>
+		
+    	<p>CPF do Locatario: <input type="text" th:field="*{locatario}" placeholder = "Insira o cpf"/></p>
+			<div class="form-group">  
+			 <p> <label class="control-label col-sm-2" for="text">Data</label>
+			 <input class="col-sm-10" type="text" id="data" th:field="*{data}" placeholder = "dia/mês/ano" th:class="${#fields.hasErrors('data')} ? 'field-error'"/>
+			 </p>
+			 <p> <label class="control-label col-sm-2" for="text">Data de Devolução</label>
+			 <input class="col-sm-10" type="text" id="datalimite" th:field="*{datalimite}" placeholder = "dia/mês/ano" th:class="${#fields.hasErrors('data')} ? 'field-error'"/>
+			</p>
+			<p>ID do Livro: <input type="text" th:field="*{livro}" placeholder = "Insira o ID do Livro"/></p>
+		</div>
+        <p><input type="submit" value="Registrar" class="btn btn-lg btn-success" /> 
+       <span th:if="${estado == 'normal'}"> <a  th:href="@{/}" class="btn btn-lg btn-info"> Voltar </a></span>
+	</div>
+</body>
+</html>

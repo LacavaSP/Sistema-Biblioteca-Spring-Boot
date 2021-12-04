@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Registro de Livro</title>
+</head>
+<body>
+	
+	<h1 layout:fragment="header">
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<img src = "https://drive.google.com/u/3/uc?id=1WrlRnPhpPXteIsSQhNz5-R69ACT_fU6_&export=download" width="100" height="100" class="d-inline-block align-top" alt="">	
+	
+	
+ 
+
+	<br>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="100" height="100" class="d-inline-block align-top" alt=""> </a>
+	<a> <img src = "https://cosama.vteximg.com.br/arquivos/ids/165368-1000-1000/spray_762_fundo_branco_p_luminosa_colorgin1.jpg?v=636748746268500000" width="75" height="100" class="d-inline-block align-top" alt=""> </a>
+	Registro de Livros
+	</br>
+	
+	</h1>
+	
+	<div layout:fragment="content">
+	<div class="well bg-secondary">
+	
+	<h1>Formulário</h1>
+	
+	      
+      <br/>
+	
+	<div th:each = "m : ${msg}" class = "well"> 
+	<span th:text = "${m}"> </span>
+	</div>
+	
+		<br/>
+		
+    <form action="#" th:action="@{/livros/form}" th:object="${livros}" method="post">
+    	<p>Nome: <input type="text" th:field="*{nome}" placeholder ="Insira o nome"/></p>
+        <p>Gênero: <input type="text" th:field="*{genero}" placeholder = "Insira o gênero"/></p>
+        <p>Número de páginas: <input type="text" th:field="*{numeroDePaginas}"placeholder ="Insira o número de páginas" /></p>
+        <p>Autor: <input type="text" th:field="*{autor}" placeholder = "Insira o nome do autor" /></p>
+        <p>Edição: <input type="text" th:field="*{edicao}" placeholder ="Insira a edição"/></p>
+        <p>Estante: <input type="text" th:field="*{estante}" placeholder ="Insira o ID da estante"/></p>
+        <p><input type="submit" value="Registrar" class="btn btn-lg btn-success" /> 
+     <span th:if="${estado == 'normal'}"> <a  th:href="@{/}" class="btn btn-lg btn-info"> Voltar </a></span>
+	</div>
+</body>
+</html>
